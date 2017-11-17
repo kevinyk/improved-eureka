@@ -1,0 +1,42 @@
+<fieldset>
+	<h3>Game number {{gameNum}}</h3>
+	<!-- Game 1 -->
+	<div *ngIf="gameNum==1">
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let player of players">
+					<td>{{player.name}}</td>
+					<td>
+						<button *ngIf="player.game1Status=='playing'" class="playing"  
+						
+						>Playing</button>
+						<button *ngIf="player.game1Status!='playing'" 
+							(click)="changeStatus(player._id, 1, 'playing')"
+						>Playing</button>
+						<button *ngIf="player.game1Status=='not_playing'" class="not_playing" 
+						
+						>Not Playing</button>
+						<button *ngIf="player.game1Status!='not_playing'" 
+							(click)="changeStatus(player._id, 1, 'not_playing')"
+						>Not Playing</button>
+						<button *ngIf="player.game1Status=='undecided'" class="undecided" 
+						
+						>Undecided</button>
+						<button *ngIf="player.game1Status!='undecided'" 
+							(click)="changeStatus(player._id, 1, 'undecided')"
+						>Undecided</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	<!-- Game 2 -->
+
+	<!-- Game 3 -->
+
+</fieldset>

@@ -1,0 +1,18 @@
+<fieldset>
+	<h3>Add Player</h3>
+	<form (submit)="onSubmit()" #playerForm="ngForm">
+		<p>Player name: <input type="text" name="name" 
+			[(ngModel)]="newPlayer.name"
+			#name = "ngModel"
+			minlength = 2
+			required
+
+		></p>
+		<p style="color:red;" *ngIf="name.invalid && name.touched">Name must be at least 2 characters long</p>
+		<p>Preferred Position: <input type="text" name="prefPos" 
+			[(ngModel)]="newPlayer.prefPos"
+			#prefPos = "ngModel"
+		></p>
+		<input type="submit" name="" [disabled] ="playerForm.invalid">
+	</form>
+</fieldset>

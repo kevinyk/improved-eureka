@@ -1,0 +1,15 @@
+.playing{
+	background-color: green;
+	color: white;
+	text-shadow: 1px solid black;
+}
+.not_playing{
+	background-color: red;
+	color: white;
+	text-shadow: 1px solid black;
+}
+.undecided{
+	background-color: yellow;
+	/*color: white;*/
+	text-shadow: 1px solid black;
+}
